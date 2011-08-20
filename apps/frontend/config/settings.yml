@@ -5,14 +5,20 @@ prod:
   .settings:
     no_script_name:         true
     logging_enabled:        false
+    redis_ip_port:          '127.0.0.1:6379'
+    mongo_ip_port:          '127.0.0.1:27017'
+    mongo_db:               'test'
 
 dev:
   .settings:
     error_reporting:        <?php echo (E_ALL | E_STRICT)."\n" ?>
     web_debug:              true
     cache:                  false
-    no_script_name:         false
+    no_script_name:         true
     etag:                   false
+    redis_ip_port:          '127.0.0.1:6381'
+    mongo_ip_port:          '127.0.0.1:27017'
+    mongo_db:               'test'
 
 test:
   .settings:
@@ -32,4 +38,4 @@ all:
     escaping_method:        ESC_SPECIALCHARS
 
     # Enable the database manager
-    use_database:           true
+    use_database:           false
