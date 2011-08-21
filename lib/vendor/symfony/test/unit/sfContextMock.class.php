@@ -20,6 +20,7 @@ class sfContext
     $controller    = null,
     $routing       = null,
     $user          = null,
+    $dispatcher    = null,
     $storage       = null;
 
   protected
